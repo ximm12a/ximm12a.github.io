@@ -27,6 +27,8 @@
     
 
     
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    
 
     
 
@@ -41,6 +43,16 @@
     <script>
         window.isPost = false
         window.aomori = {
+            
+            gitalk: {
+                enable: true,
+                clientID: "c4c99d0beb02523f21af",
+                clientSecret: "10bc1db40404698e0ee9b721c435724a7f97bc2d",
+                repo: "https://github.com/ximm12a/ximm12a.github.io",
+                owner: "ximm12a",
+                admin: ["ximm12a",],
+                distractionFreeMode: true // Facebook-like distraction free mode  // Facebook-like distraction free mode
+            },
             
             
             
@@ -70,6 +82,12 @@
         <div class="header-menu">
             <div class="header-menu-inner">
                 
+                <a href="/">Home</a>
+                
+                <a href="/archives">Archives</a>
+                
+                <a href="/photography">photography</a>
+                
             </div>
             <div class="header-menu-social">
                 
@@ -91,6 +109,12 @@
                     <i class="icon icon-cross"></i>
                 </div>
                 <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">Home</a>
+                    
+                    <a href="/archives">Archives</a>
+                    
+                    <a href="/photography">photography</a>
                     
                 </div>
             </div>
@@ -227,6 +251,8 @@
 
 <script type="module" src="https://unpkg.com/ionicons@6.0.2/dist/ionicons/ionicons.esm.js"></script>
 
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 
 
