@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":10,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="特别觉得新闻的重要性，所以提供我看新闻的来源新闻在我们的日常生活中扮演着非常重要的角色。它不仅可以让我们了解当前的社会状况和世界大事，还可以帮助我们了解各种观点和态度。通过了解不同的观点和态度，我们可以更好地理解世界，更好地思考和做出决策。 此外，新闻还可以提供视野，扩展我们的认知。通过了解不同地区、不同领域的新闻，我们能够了解更多的文化、历史和社会背景，从而更好地理解世界。新闻还可以让我们了解科">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的新闻来源-RSS">
+<meta property="og:url" content="http://example.com/2023/03/14/%E6%88%91%E7%9A%84%E6%96%B0%E9%97%BB%E6%9D%A5%E6%BA%90-RSS/index.html">
+<meta property="og:site_name" content="Min Z">
+<meta property="og:description" content="特别觉得新闻的重要性，所以提供我看新闻的来源新闻在我们的日常生活中扮演着非常重要的角色。它不仅可以让我们了解当前的社会状况和世界大事，还可以帮助我们了解各种观点和态度。通过了解不同的观点和态度，我们可以更好地理解世界，更好地思考和做出决策。 此外，新闻还可以提供视野，扩展我们的认知。通过了解不同地区、不同领域的新闻，我们能够了解更多的文化、历史和社会背景，从而更好地理解世界。新闻还可以让我们了解科">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-14T11:33:08.000Z">
+<meta property="article:modified_time" content="2023-03-14T11:42:46.561Z">
+<meta property="article:author" content="Min Z">
+<meta property="article:tag" content="电脑">
+<meta property="article:tag" content="RSS">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/03/14/%E6%88%91%E7%9A%84%E6%96%B0%E9%97%BB%E6%9D%A5%E6%BA%90-RSS/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>我的新闻来源-RSS | Min Z</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Min Z" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Min Z</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/14/%E6%88%91%E7%9A%84%E6%96%B0%E9%97%BB%E6%9D%A5%E6%BA%90-RSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Min Z">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Min Z">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          我的新闻来源-RSS
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-14 19:33:08 / 修改时间：19:42:46" itemprop="dateCreated datePublished" datetime="2023-03-14T19:33:08+08:00">2023-03-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="特别觉得新闻的重要性，所以提供我看新闻的来源"><a href="#特别觉得新闻的重要性，所以提供我看新闻的来源" class="headerlink" title="特别觉得新闻的重要性，所以提供我看新闻的来源"></a><strong>特别觉得新闻的重要性，所以提供我看新闻的来源</strong></h3><p>新闻在我们的日常生活中扮演着非常重要的角色。它不仅可以让我们了解当前的社会状况和世界大事，还可以帮助我们了解各种观点和态度。通过了解不同的观点和态度，我们可以更好地理解世界，更好地思考和做出决策。</p>
+<p>此外，新闻还可以提供视野，扩展我们的认知。通过了解不同地区、不同领域的新闻，我们能够了解更多的文化、历史和社会背景，从而更好地理解世界。新闻还可以让我们了解科技、医疗和经济等方面的进展，帮助我们更好地适应和应对变化。</p>
+<h2 id="新闻源-RSS-地址"><a href="#新闻源-RSS-地址" class="headerlink" title="新闻源 RSS 地址"></a>新闻源 RSS 地址</h2><span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>类</th>
+<th>新闻</th>
+<th>RSS地址</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>自由新闻</td>
+<td>端传媒 - 即时</td>
+<td><a target="_blank" rel="noopener" href="https://rsshub.app/theinitium/channel/news-brief/zh-hans">https://rsshub.app/theinitium/channel/news-brief/zh-hans</a></td>
+<td>早报 晚报</td>
+</tr>
+<tr>
+<td></td>
+<td>端傳媒</td>
+<td>Initium Media</td>
+<td><a target="_blank" rel="noopener" href="https://theinitium.com/newsfeed/">https://theinitium.com/newsfeed/</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>国际新闻</td>
+<td>《联合早报》中港台 即时</td>
+<td><a target="_blank" rel="noopener" href="https://rsshub.app/zaobao/realtime/china">https://rsshub.app/zaobao/realtime/china</a></td>
+<td>即时新闻 一般看标题</td>
+</tr>
+<tr>
+<td></td>
+<td>纽约时报 新闻早报</td>
+<td><a target="_blank" rel="noopener" href="https://rsshub.app/nytimes/morning_post">https://rsshub.app/nytimes/morning_post</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>纽约时报</td>
+<td><a target="_blank" rel="noopener" href="https://feedx.net/rss/nytimes.xml">https://feedx.net/rss/nytimes.xml</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>BBC News 中文网</td>
+<td><a target="_blank" rel="noopener" href="https://rsshub.app/bbc/chinese">https://rsshub.app/bbc/chinese</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>华尔街日报</td>
+<td><a target="_blank" rel="noopener" href="https://feedx.net/rss/wsj.xml">https://feedx.net/rss/wsj.xml</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>法广_头条新闻-RFI</td>
+<td><a target="_blank" rel="noopener" href="http://cn.rfi.fr/general/rss">http://cn.rfi.fr/general/rss</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>德国之声</td>
+<td><a target="_blank" rel="noopener" href="https://feedx.net/rss/dw.xml">https://feedx.net/rss/dw.xml</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>NHK WORLD-JAPAN</td>
+<td><a target="_blank" rel="noopener" href="https://feedx.net/rss/nhk.xml">https://feedx.net/rss/nhk.xml</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>国内新闻</td>
+<td>财新网</td>
+<td><a target="_blank" rel="noopener" href="http://feedmaker.kindle4rss.com/feeds/caixinwang.weixin.xml">http://feedmaker.kindle4rss.com/feeds/caixinwang.weixin.xml</a></td>
+<td>深度报道 无法看全文</td>
+</tr>
+<tr>
+<td></td>
+<td>澎湃新闻</td>
+<td><a target="_blank" rel="noopener" href="https://feedx.net/rss/thepaper.xml">https://feedx.net/rss/thepaper.xml</a></td>
+<td>观察社会状况</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>其它</td>
+<td>Solidot</td>
+<td><a target="_blank" rel="noopener" href="http://www.solidot.org/index.rss">http://www.solidot.org/index.rss</a></td>
+<td>报道多样化 补充视野</td>
+</tr>
+<tr>
+<td></td>
+<td>三联生活周刊</td>
+<td><a target="_blank" rel="noopener" href="http://feedmaker.kindle4rss.com/feeds/lifeweek.weixin.xml">http://feedmaker.kindle4rss.com/feeds/lifeweek.weixin.xml</a></td>
+<td>国内媒体周刊</td>
+</tr>
+<tr>
+<td></td>
+<td>每日环球视野</td>
+<td><a target="_blank" rel="noopener" href="https://feedx.net/rss/idaily.xml">https://feedx.net/rss/idaily.xml</a></td>
+<td>世界各地发生什么事</td>
+</tr>
+<tr>
+<td></td>
+<td>喷嚏图卦</td>
+<td><a target="_blank" rel="noopener" href="https://feedx.net/rss/pentitugua.xml">https://feedx.net/rss/pentitugua.xml</a></td>
+<td>争议性资讯</td>
+</tr>
+<tr>
+<td></td>
+<td>FT中文网 - 今日焦点</td>
+<td><a target="_blank" rel="noopener" href="http://ftr.fivefilters.org/makefulltextfeed.php?url=http://www.ftchinese.com/rss/news&max=3">http://ftr.fivefilters.org/makefulltextfeed.php?url=http://www.ftchinese.com/rss/news&amp;max=3</a></td>
+<td>看标题</td>
+</tr>
+<tr>
+<td></td>
+<td>还有一些不便列出</td>
+<td>rss地址仅供参考，部分来自RSSHub Radar和feedx站点。</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>有些新闻没rss，可搜索它的微博或tw 社交平台，<strong>RSSHub Radar</strong>有提供社交平台的rss订阅地址，可以用这方法曲线订阅这类新闻。</p>
+<p><strong>我们在辨论正反方时，好多时候是来自接收新闻渠道不同而造成。</strong></p>
+<p><strong>希望提供多样化新闻，扩宽视野，接受彼此的观点。从而可以深入讨论，达成有效的沟通，而不是分辨谁对谁错等等没营养的沟通。</strong></p>
+<hr>
+<hr>
+<h2 id="RSS-介绍"><a href="#RSS-介绍" class="headerlink" title="RSS 介绍"></a>RSS 介绍</h2><p>RSS 意思是 Really Simple Syndication。它是一种用于传送经常变化的网络内容的格式。使用 RSS 可以让您轻松地获取您感兴趣的网站的最新内容。您可以使用 RSS 在一个地方阅读它们，而不必单独访问每个网站。</p>
+<p>RSS 源通常用于频繁添加或修改内容的网站，例如新闻网站、博客或播客。通过订阅 RSS 源，您可以在新内容发布时自动接收更新。</p>
+<p>要使用 RSS，您需要一个 RSS 阅读器或聚合器，这可以是一个独立的应用程序或基于 Web 的服务。许多 Web 浏览器也具有内置的 RSS 功能。</p>
+<p>总的来说，RSS 是一种方便的方式，可以让您随时了解您最喜欢的网站和内容的最新动态，而无需手动不断地检查更新。</p>
+<blockquote>
+<p><strong>另附：</strong>关于威尔史密斯打人，台湾国小老师给孩子上了一堂社会实验课_腾讯新闻(<a target="_blank" rel="noopener" href="https://new.qq.com/rain/a/20220404A061ZU00">https://new.qq.com/rain/a/20220404A061ZU00</a>)</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%94%B5%E8%84%91/" rel="tag"># 电脑</a>
+              <a href="/tags/RSS/" rel="tag"># RSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/01/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/14/%E5%B0%86AHK%E5%BD%93%E6%88%90-%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80-%E5%BE%88%E5%A5%BD%E7%94%A8-AutoHotkey/" rel="next" title="将AHK当成 快捷键打开 很好用-AutoHotkey">
+      将AHK当成 快捷键打开 很好用-AutoHotkey <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%88%AB%E8%A7%89%E5%BE%97%E6%96%B0%E9%97%BB%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7%EF%BC%8C%E6%89%80%E4%BB%A5%E6%8F%90%E4%BE%9B%E6%88%91%E7%9C%8B%E6%96%B0%E9%97%BB%E7%9A%84%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">特别觉得新闻的重要性，所以提供我看新闻的来源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E9%97%BB%E6%BA%90-RSS-%E5%9C%B0%E5%9D%80"><span class="nav-number"></span> <span class="nav-text">新闻源 RSS 地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RSS-%E4%BB%8B%E7%BB%8D"><span class="nav-number"></span> <span class="nav-text">RSS 介绍</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Min Z"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Min Z</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:nuitjgjym@proton.me" title="E-Mail → mailto:nuitjgjym@proton.me" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Min Z</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":10,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="AutoHotkeyAutoHotkey是一种用于自动化计算机操作的脚本语言。 它可以让用户自定义键盘快捷键，鼠标快捷键和其他可编程的操作，以提高工作效率。 它还可以自动化重复性任务，例如打开特定的文件夹，运行特定的程序，甚至可以模拟鼠标和键盘输入。 AutoHotkey还具有广泛的支持和活跃的社区，用户可以在其官方网站或其他社区网站上找到各种脚本和应用程序。 如果您想要自定义自己的计算机操作或自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将AHK当成 快捷键打开 很好用-AutoHotkey">
+<meta property="og:url" content="http://example.com/2023/03/14/%E5%B0%86AHK%E5%BD%93%E6%88%90-%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80-%E5%BE%88%E5%A5%BD%E7%94%A8-AutoHotkey/index.html">
+<meta property="og:site_name" content="Min Z">
+<meta property="og:description" content="AutoHotkeyAutoHotkey是一种用于自动化计算机操作的脚本语言。 它可以让用户自定义键盘快捷键，鼠标快捷键和其他可编程的操作，以提高工作效率。 它还可以自动化重复性任务，例如打开特定的文件夹，运行特定的程序，甚至可以模拟鼠标和键盘输入。 AutoHotkey还具有广泛的支持和活跃的社区，用户可以在其官方网站或其他社区网站上找到各种脚本和应用程序。 如果您想要自定义自己的计算机操作或自">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/%5Cimg%5CE1.jpeg">
+<meta property="article:published_time" content="2023-03-14T11:46:15.000Z">
+<meta property="article:modified_time" content="2023-03-14T11:50:25.783Z">
+<meta property="article:author" content="Min Z">
+<meta property="article:tag" content="电脑">
+<meta property="article:tag" content="autohotkey">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%5Cimg%5CE1.jpeg">
+
+<link rel="canonical" href="http://example.com/2023/03/14/%E5%B0%86AHK%E5%BD%93%E6%88%90-%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80-%E5%BE%88%E5%A5%BD%E7%94%A8-AutoHotkey/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>将AHK当成 快捷键打开 很好用-AutoHotkey | Min Z</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Min Z" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Min Z</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/14/%E5%B0%86AHK%E5%BD%93%E6%88%90-%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80-%E5%BE%88%E5%A5%BD%E7%94%A8-AutoHotkey/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Min Z">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Min Z">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          将AHK当成 快捷键打开 很好用-AutoHotkey
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-14 19:46:15 / 修改时间：19:50:25" itemprop="dateCreated datePublished" datetime="2023-03-14T19:46:15+08:00">2023-03-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="AutoHotkey"><a href="#AutoHotkey" class="headerlink" title="AutoHotkey"></a>AutoHotkey</h2><p>AutoHotkey是一种用于自动化计算机操作的脚本语言。 它可以让用户自定义键盘快捷键，鼠标快捷键和其他可编程的操作，以提高工作效率。 它还可以自动化重复性任务，例如打开特定的文件夹，运行特定的程序，甚至可以模拟鼠标和键盘输入。</p>
+<p>AutoHotkey还具有广泛的支持和活跃的社区，用户可以在其官方网站或其他社区网站上找到各种脚本和应用程序。</p>
+<p>如果您想要自定义自己的计算机操作或自动化重复任务，那么AutoHotkey是一个非常有用的工具。 它易于学习和使用，并且可以大大提高您的生产力。</p>
+<hr>
+<h2 id="将AHK当成-快捷键打开-很好用，以下提供我常用AHK的方式"><a href="#将AHK当成-快捷键打开-很好用，以下提供我常用AHK的方式" class="headerlink" title="将AHK当成 快捷键打开 很好用，以下提供我常用AHK的方式"></a>将AHK当成 快捷键打开 很好用，以下提供我常用AHK的方式</h2><p>快捷键打开，分成3个打开用途，1软件，2文件夹，3网站。</p>
+<p>所以将键盘设3种，方便记忆。</p>
+<p><strong>win键+ctrl键   ：打开软件类</strong></p>
+<p><strong>win键+alt键    ：打开网站类</strong></p>
+<p><strong>win键+shift键 ：打开文件夹类</strong></p>
+<span id="more"></span>
+
+<h3 id="快捷键-软件"><a href="#快捷键-软件" class="headerlink" title=";;快捷键 软件"></a>;;快捷键 软件</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#^<span class="attr">f</span>::<span class="title class_">Run</span> <span class="attr">D</span>:\soft\<span class="title class_">Firefox</span>.<span class="property">lnk</span></span><br><span class="line">#^<span class="attr">e</span>::<span class="title class_">Run</span> <span class="attr">D</span>:\soft\<span class="title class_">Everything</span>-<span class="number">1.4</span><span class="number">.1</span><span class="number">.1022</span>.<span class="property">x64</span>\<span class="title class_">Everything</span>.<span class="property">exe</span></span><br></pre></td></tr></table></figure>
+
+<p>将上面的路径地址，换上你软件地址，然后按如下键</p>
+<p><strong>win键+ctrl键  + f ：打开火狐浏览器</strong></p>
+<p><strong>win键+ctrl键  + e ：打开</strong>Everything</p>
+<hr>
+<h3 id="快捷键-文件夹"><a href="#快捷键-文件夹" class="headerlink" title=";;快捷键 文件夹"></a>;;快捷键 文件夹</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!<span class="attr">d</span>::<span class="title class_">Run</span> <span class="attr">D</span>:\</span><br><span class="line">#!<span class="attr">e</span>::<span class="title class_">Run</span> <span class="attr">E</span>:\</span><br></pre></td></tr></table></figure>
+
+<p><strong>win键+alt键  +d ：打开d盘</strong></p>
+<p><strong>win键+alt键  +e ：打开e盘</strong></p>
+<hr>
+<h3 id="快捷键-网站"><a href="#快捷键-网站" class="headerlink" title=";;快捷键 网站"></a>;;快捷键 网站</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#+<span class="attr">q</span>::<span class="title class_">Run</span> [<span class="attr">https</span>:<span class="comment">//mail.qq.com](https://mail.qq.com/)</span></span><br><span class="line">#+<span class="attr">w</span>::<span class="title class_">Run</span> [<span class="attr">https</span>:<span class="comment">//mp.weixin.qq.com/](https://mp.weixin.qq.com/)</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>win键+shift键 +q ：打开qq邮箱</strong></p>
+<p><strong>win键+shift键 +w ：打开微信公众号</strong></p>
+<p>另外：<strong>可用EDGE网站的应用方式，将网站当成软件打开。方便快捷，需要联网。</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#+<span class="attr">o</span>::<span class="title class_">Run</span> <span class="string">&quot;C:\Program Files (x86)\Microsoft\Edge\Application\msedge_proxy.exe&quot;</span> --profile-directory=<span class="title class_">Default</span> --app-id=eigpmdhekjlgjgcppnanaanbdmnlnagl --app-url=<span class="attr">https</span>:<span class="comment">//outlook.live.com/calendar --app-launch-source=4</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/%5Cimg%5CE1.jpeg" alt="Untitled"></p>
+<p><strong>;;快捷键    win键+shift键 +b ：用百度搜索选中的文字</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#+<span class="attr">b</span>::</span><br><span class="line"><span class="title class_">Send</span> ^c</span><br><span class="line"><span class="title class_">Run</span> [<span class="attr">http</span>:<span class="comment">//www.baidu.com/s?wd=%clipboard%](http://www.baidu.com/s?wd=%25clipboard%25)</span></span><br><span class="line"><span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>;;快捷键  用google搜索选中的文字  g</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#+<span class="attr">g</span>::</span><br><span class="line"><span class="title class_">Send</span> ^c</span><br><span class="line"><span class="title class_">Run</span> [<span class="attr">https</span>:<span class="comment">//www.google.com/search?q=%clipboard%](https://www.google.com/search?q=%25clipboard%25)</span></span><br><span class="line"><span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>注，ahk强大功能，而本人主要用作快捷键，惭愧。TAT</p>
+<p>以上是我主要想分享的内容。</p>
+<h2 id="以下是我配置内容"><a href="#以下是我配置内容" class="headerlink" title="以下是我配置内容"></a>以下是我配置内容</h2><p>; 打开 计算器<br>#j::<br>Run calc<br>return</p>
+<p>; 打开&#x2F;激活 记事本<br>#n::<br>IfWinExist ahk_class Notepad ;当检测已存在笔记本时则激活,而不是打开,否则打开新的<br>WinActivate ahk_class Notepad<br>Else<br>Run notepad<br>Return</p>
+<p>;#IfWinActive ahk_class Notepad ;这里的意思是当记事本激活时Esc键才会奏效<br>;~Esc::<br>;WinClose A ;这里的大写字母A已经表示了当前激活的窗口,不必更改! 按esc 关闭记事本<br>;Return</p>
+<p>;win+c 复制路径文件或文件夹<br>#c::<br>Send,^c<br>ClipWait<br>path &#x3D; %Clipboard%<br>Clipboard &#x3D; %path%<br>Tooltip,%path%<br>Sleep,1000<br>Tooltip<br>Return</p>
+<p>;当天日期 年月日<br>#t::<br>d &#x3D; %A_YYYY%.%A_MM%.%A_DD%.<br>clipboard &#x3D; %d%<br>Send ^v<br>return</p>
+<p>;打开&#x2F;激活 桌面的日期时间<br>#y::#!d</p>
+<p>;;快捷键  打开控制面板<br>^!#x::Run control</p>
+<p>;;快捷键  卸载程序面板<br>^!#d::Run control appwiz.cpl</p>
+<hr>
+<p>; 将选中的文字，复制粘贴到 记事本 并换行</p>
+<p>#^!c::<br>sleep, 300<br>send, ^c<br>sleep, 300<br>IfWinExist ahk_class Notepad ;当检测已存在笔记本时则激活,而不是打开,否则打开新的<br>WinActivate ahk_class Notepad<br>Else<br>Run Notepad</p>
+<p>sleep, 300<br>send, {enter}{enter}^v<br>return</p>
+<p>;;win10 休眠 关机 重启</p>
+<p>;关闭屏幕<br>#!^F9::<br>Sleep 1000<br>SendMessage, 0x112, 0xF170, 2,, Program Manager<br>return</p>
+<p>;;休眠<br>#!^F10::<br>sleep,1000<br>DllCall(“PowrProf\SetSuspendState”, “int”, 1, “int”, 0, “int”, 0)<br>Return</p>
+<p>;;关机<br>#!^F11::<br>sleep,1000<br>Shutdown, 5<br>Return</p>
+<p>;;重启<br>#!^F12::<br>sleep,1000<br>Shutdown, 6<br>Return</p>
+<p>;切换激活的窗口的置顶与否的状态<br>Capslock &amp; t::<br>WinSet,TopMost,,A<br>return</p>
+<p>;隐藏各个窗口的标题栏<br>CapsLock &amp; e::<br>WinSet, Style, ^0xC00000, A<br>WinSet, Style, ^0×40000, A<br>return</p>
+<p>;;音量控制 按下capslock + 鼠标滚动 上、下、点击<br>CapsLock &amp; WheelUp::Send {Volume_Up 1}<br>CapsLock &amp; WheelDown::Send {Volume_Down 3}  ;这里如果不加参数的话就是默认5<br>CapsLock &amp; MButton::Send {Volume_Mute}</p>
+<p>::@dg::<br>clipboard &#x3D; 看起来不错，感谢分享，回复看看。<br>;把文字发送到剪贴板（Clipboard）<br>Send ^v<br>;Send 也是很常用的命令，表示向当前程序发送按键，根据上一篇快餐店文章我们可以推断，这句命令是向当前程序发送 Ctrl + V（粘贴的快捷键）。也就是把已经发送剪贴板的文字粘贴出来。<br>return<br>;代表这一小段程序的结束。像上面只有一行的代码是不需要 return 命令的</p>
+<p>;实现对方向键的映射, 打字的时候灰常有用<br>Capslock &amp; a:: Send {left}<br>Capslock &amp; d:: Send {right}<br>Capslock &amp; w:: Send {up}<br>Capslock &amp; s:: Send {down}</p>
+<p>;实现对方向键的映射,写代码的时候灰常有用<br>!j:: Send {left}<br>!l:: Send {right}<br>!i:: Send {up}<br>!k:: Send {down}</p>
+<p>+!j:: Send +{left}<br>+!l:: Send +{right}<br>+!i:: Send +{up}<br>+!k:: Send +{down}</p>
+<p>;选择一整行<br>!a::<br>Send {Home}<br>Send +{End}<br>return</p>
+<hr>
+<p>;;用 CapsLock 键+数字实现指定窗口的隐藏与显示  <a target="_blank" rel="noopener" href="http://ahkcn.net/thread-5639.html#">http://ahkcn.net/thread-5639.html#</a></p>
+<p>OnExit,ExitSub<br>CapsLock &amp; 1::zWinHide(1)<br>CapsLock &amp; 2::zWinHide(2)<br>CapsLock &amp; 3::zWinHide(3)</p>
+<p>zWinHide(zKey){<br>global<br>if(chs%zKey%){ ;显示程序<br>wh:&#x3D;chs%zKey%<br>WinShow,ahk_id %wh%<br>chs%zKey%:&#x3D;<br>zCount-&#x3D;1<br>}else{ ;隐藏程序<br>MouseGetPos,,,wh<br>chs%zKey%:&#x3D;wh<br>WinHide,ahk_id %wh%<br>zCount+&#x3D;1<br>}<br>}<br>ExitSub:<br>Loop %zCount%<br>{<br>wh:&#x3D;chs%A_Index%<br>WinShow,ahk_id %wh%<br>}<br>ExitApp</p>
+<hr>
+<p>;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>; 按住 Capslock 键 + 鼠标左键 可移动窗口<br>; 注意: 在按下鼠标按钮后您可以释放 Capslock 或鼠标中键<br>; 而不需要在整个拖动过程中按住它.<br>; 此脚本需要 v1.0.25+. <a target="_blank" rel="noopener" href="https://wyagd001.github.io/zh-cn/docs/scripts/EasyWindowDrag.htm">https://wyagd001.github.io/zh-cn/docs/scripts/EasyWindowDrag.htm</a></p>
+<p>Capslock &amp; LButton::<br>CoordMode, Mouse  ; 切换到屏幕&#x2F;绝对坐标。</p>
+<p>MouseGetPos, EWD_MouseStartX, EWD_MouseStartY, EWD_MouseWin<br>WinGetPos, EWD_OriginalPosX, EWD_OriginalPosY,,, ahk_id %EWD_MouseWin%<br>WinGet, EWD_WinState, MinMax, ahk_id %EWD_MouseWin%<br>if EWD_WinState &#x3D; 0  ; 仅在窗口不处于最大化状态时<br>SetTimer, EWD_WatchMouse, 10 ; 在用户拖动时跟踪鼠标.<br>return</p>
+<p>EWD_WatchMouse:<br>GetKeyState, EWD_LButtonState, LButton, P<br>if EWD_LButtonState &#x3D; U  ; 按钮已经释放, 所以拖动结束.<br>{<br>SetTimer, EWD_WatchMouse, off<br>return<br>}<br>GetKeyState, EWD_EscapeState, Escape, P<br>if EWD_EscapeState &#x3D; D  ; 按下了 Escape, 所以取消拖动.<br>{<br>SetTimer, EWD_WatchMouse, off<br>WinMove, ahk_id %EWD_MouseWin%,, %EWD_OriginalPosX%, %EWD_OriginalPosY%<br>return<br>}</p>
+<p>; 否则, 改变窗口的位置以匹配<br>; 用户拖动鼠标引起的鼠标坐标变化:<br>CoordMode, Mouse<br>MouseGetPos, EWD_MouseX, EWD_MouseY<br>WinGetPos, EWD_WinX, EWD_WinY,,, ahk_id %EWD_MouseWin%<br>SetWinDelay, -1   ; 让下面的移动更快速&#x2F;平滑.</p>
+<p>WinMove, ahk_id %EWD_MouseWin%,, EWD_WinX + EWD_MouseX - EWD_MouseStartX, EWD_WinY + EWD_MouseY - EWD_MouseStartY<br>EWD_MouseStartX :&#x3D; EWD_MouseX  ; 为下一次调用此子程序进行更新.<br>EWD_MouseStartY :&#x3D; EWD_MouseY<br>return</p>
+<hr>
+<p>;;;;;;;;;;;;;;;;;;;;;;;;;;THANKS AHK;;;;;;;;;;;;;;;;;;;;;;;;;;;;</p>
+<p>AutoHotkey 向导：创建宏和热键<br><a target="_blank" rel="noopener" href="http://ahkcn.github.io/docs/Tutorial.htm">http://ahkcn.github.io/docs/Tutorial.htm</a></p>
+<p>;;;;<a target="_blank" rel="noopener" href="https://www.autohotkey.com/">https://www.autohotkey.com/</a> 官网<br>;;;;<a target="_blank" rel="noopener" href="https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm">https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm</a> 帮助<br>;;;;<a target="_blank" rel="noopener" href="http://ahkcn.net/">http://ahkcn.net/</a>  中文论坛<br>;;;;<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19645501">https://www.zhihu.com/question/19645501</a>  AutoHotKey 常用函数或小技巧有哪些分享？ - 知乎</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%94%B5%E8%84%91/" rel="tag"># 电脑</a>
+              <a href="/tags/autohotkey/" rel="tag"># autohotkey</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/14/%E6%88%91%E7%9A%84%E6%96%B0%E9%97%BB%E6%9D%A5%E6%BA%90-RSS/" rel="prev" title="我的新闻来源-RSS">
+      <i class="fa fa-chevron-left"></i> 我的新闻来源-RSS
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AutoHotkey"><span class="nav-number">1.</span> <span class="nav-text">AutoHotkey</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86AHK%E5%BD%93%E6%88%90-%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80-%E5%BE%88%E5%A5%BD%E7%94%A8%EF%BC%8C%E4%BB%A5%E4%B8%8B%E6%8F%90%E4%BE%9B%E6%88%91%E5%B8%B8%E7%94%A8AHK%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">将AHK当成 快捷键打开 很好用，以下提供我常用AHK的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE-%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">;;快捷键 软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE-%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">2.2.</span> <span class="nav-text">;;快捷键 文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE-%E7%BD%91%E7%AB%99"><span class="nav-number">2.3.</span> <span class="nav-text">;;快捷键 网站</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E6%98%AF%E6%88%91%E9%85%8D%E7%BD%AE%E5%86%85%E5%AE%B9"><span class="nav-number">3.</span> <span class="nav-text">以下是我配置内容</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Min Z"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Min Z</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:nuitjgjym@proton.me" title="E-Mail → mailto:nuitjgjym@proton.me" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Min Z</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
